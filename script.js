@@ -4,17 +4,17 @@
 //4. Output outcome
 
 
-function getComputerChoice(){
-    const computerOptions = ['rock', 'paper', 'scizzors'];
+// function getComputerChoice(){
+//     const computerOptions = ['rock', 'paper', 'scizzors'];
 
-    const computerRandom = Math.floor(Math.random()* computerOptions.length);
+//     const computerRandom = Math.floor(Math.random()* computerOptions.length);
     
-    let computerSelection = computerOptions[computerRandom]
-    console.log(computerSelection);
+//     let computerSelection = computerOptions[computerRandom]
+//     console.log(computerSelection);
        
-}
+// }
     
-    getComputerChoice();
+//     getComputerChoice();
 
     
 
@@ -38,39 +38,39 @@ function getComputerChoice(){
 
 
 
-// function playRound(playerSelection, computerSelection){ 
-//     function getYourChoice(){
-//         return playerSelection = prompt("Your choice:");}
-//             getYourChoice();
+function playRound(playerSelection, computerSelection){ 
+    function getYourChoice(){
+        return playerSelection = prompt("Your choice:");}
+            getYourChoice();
 
-//     function getComputerChoice(){
-//         const computerOptions = ['rock', 'paper', 'scizzors'];
+    function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors']){
+                    
+        const computerRandom = Math.floor(Math.random()* computerOptions.length);
 
-//         const computerSelection = Math.floor(Math.random()* computerOptions.length);
-//         console.log(computerOptions[computerSelection]);}
-        
-       
-//         getComputerChoice();
-
-//             console.log(computerSelection);
-
-
-
-
-
+         
+                
+        let computerSelection = computerOptions[computerRandom];
+        console.log(computerSelection);       
+    }
+    
+        getComputerChoice();
+            
+    
+        console.log(playerSelection);    
 
 
-//     if (playerSelection === computerSelection){
-//         console.log("DRAW")
-//     } else if (playerSelection === "rock" && computerSelection === "paper"){
-//         console.log("You Lose.");
-//     } else if (playerSelection === "paper" && computerSelection === "scizzors"){
-//         console.log("You Lose.");
-//     } else{
-//         console.log("You Win!");
-//     }
+    if (playerSelection === computerSelection){
+        console.log("DRAW")
+    } else if (playerSelection === "rock" && computerSelection === "paper"){
+        console.log("You Lose.");
+    } else if (playerSelection === "paper" && computerSelection === "scizzors"){
+        console.log("You Lose.");
+    } else{
+        console.log("You Win!");
+    }
 
     
-//     };
+    };
        
-// playRound()
+playRound()
+
