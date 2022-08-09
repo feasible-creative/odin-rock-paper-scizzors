@@ -12,15 +12,6 @@ function playRound(playerSelection, computerSelection){
 
 
 
-        
-
-
-
-
-
-
-
-
     function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors']){
                     
         const computerRandom = Math.floor(Math.random()* computerOptions.length);
@@ -34,10 +25,12 @@ function playRound(playerSelection, computerSelection){
         getComputerChoice();
             
     
-        console.log(playerSelection);    
+       // update below:  
+    if (playerSelection !== "rock")
+    
+    {console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"     ")
 
-
-    if (playerSelection === computerSelection){
+   }else if (playerSelection === computerSelection){
         console.log("DRAW")
     } else if (playerSelection === "rock" && computerSelection === "paper"){
         console.log("You Lose.");
@@ -47,7 +40,7 @@ function playRound(playerSelection, computerSelection){
         console.log("You Win!");
     }
 
-    
+   
     };
        
 playRound()
