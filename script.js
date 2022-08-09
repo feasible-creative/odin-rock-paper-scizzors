@@ -4,44 +4,22 @@
 //4. Output outcome
 
 
-// function getComputerChoice(){
-//     const computerOptions = ['rock', 'paper', 'scizzors'];
-
-//     const computerRandom = Math.floor(Math.random()* computerOptions.length);
-    
-//     let computerSelection = computerOptions[computerRandom]
-//     console.log(computerSelection);
-       
-// }
-    
-//     getComputerChoice();
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-// const computerOptions = ['rock', 'paper', 'scizzors'];
-
-// const randomSelector = Math.floor(Math.random()* computerOptions.length);
-// console.log(randomSelector, computerOptions[randomSelector]);
-
-
-
 
 function playRound(playerSelection, computerSelection){ 
     function getYourChoice(){
-        return playerSelection = prompt("Your choice:");}
+        return playerSelection = prompt("Your choice:").toLowerCase();}
             getYourChoice();
+
+
+
+        
+
+
+
+
+
+
+
 
     function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors']){
                     
