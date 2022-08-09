@@ -4,43 +4,17 @@
 //4. Output outcome
 
 
+    
+    
+
+
 
 // function getComputerChoice(){
-//     let Computer = 
-
+//  ['rock', 'paper', 'scizzors'];
+ 
 
 // }
 
-// playerSelection
-// computerSelection
-
-
-
-
-function yourChoice(){
-    return playerSelection = prompt("Your choice:");
- 
-}
-
-yourChoice();
-
-
-let computerSelection = "Scizzors";
-
-
-function playRound(){
-if (playerSelection === computerSelection){
-    console.log("DRAW")
-} else if (playerSelection === "rock" && computerSelection === "paper"){
-    console.log("You Lose.");
-} else if (playerSelection === "paper" && computerSelection === "Scizzors"){
-    console.log("You Lose.");
-} else{
-    console.log("You Win!");
-}
-};
-   
-    playRound()
 
 
 
@@ -48,10 +22,33 @@ if (playerSelection === computerSelection){
 
 
 
+// function yourChoice(){
+//     return answer = prompt("Your choice:")
+  
+// }
+
+
+
+
+function playRound(playerSelection, computerSelection){ 
+    function yourChoice(){
+        return playerSelection = prompt("Your choice:");}
+          yourChoice();
+    
+      
+
+
+    if (playerSelection === computerSelection){
+        console.log("DRAW")
+    } else if (playerSelection === "rock" && computerSelection === "paper"){
+        console.log("You Lose.");
+    } else if (playerSelection === "paper" && computerSelection === "scizzors"){
+        console.log("You Lose.");
+    } else{
+        console.log("You Win!");
+    }
 
     
-// } else if{
-//     playerSelection === "Rock" && computerSelection === "Paper"{console.log("You Lose.")
-
-//     }
-// };
+    };
+       
+playRound()
