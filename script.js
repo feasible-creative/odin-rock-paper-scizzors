@@ -3,6 +3,12 @@
 //3. Determine winner of Game
 //4. Output outcome
 
+    // return computerSelection = "paper";             
+        // const computerRandom = Math.floor(Math.random()* computerOptions.length);
+        
+                
+        // let computerSelection = computerOptions[computerRandom];
+          
 
 
 function playRound(playerSelection, computerSelection){ 
@@ -13,21 +19,19 @@ function playRound(playerSelection, computerSelection){
 
 
     function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors'])
-    {     return computerSelection = "paper";             
-        // const computerRandom = Math.floor(Math.random()* computerOptions.length);
-        
-                
-        // let computerSelection = computerOptions[computerRandom];
-          
+    {   
+        return computerSelection = computerOptions[Math.floor(Math.random()*computerOptions.length)]
+       
+    
     }
     
         getComputerChoice();
         console.log("The computer selected " + computerSelection + ", you selected " + playerSelection);    
     
-     // update below:  
+
     if (playerSelection == "rock" || playerSelection == "paper"|| playerSelection == "scizzors"){
         if (playerSelection === computerSelection){
-        console.log("DRAW")
+        console.log("It's a draw!")
         } else if (playerSelection === "rock" && computerSelection === "paper"){console.log("You Lose.");
         } else if (playerSelection === "paper" && computerSelection === "scizzors"){
         console.log("You Lose.");
