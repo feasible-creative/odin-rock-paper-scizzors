@@ -12,18 +12,17 @@ function playRound(playerSelection, computerSelection){
 
 
 
-    function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors']){
-                    
-        const computerRandom = Math.floor(Math.random()* computerOptions.length);
-
-         
+    function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors'])
+    {     return computerSelection = "paper";             
+        // const computerRandom = Math.floor(Math.random()* computerOptions.length);
+        
                 
-        let computerSelection = computerOptions[computerRandom];
-        // console.log(computerSelection);       
+        // let computerSelection = computerOptions[computerRandom];
+          
     }
     
         getComputerChoice();
-            
+        console.log("The computer selected " + computerSelection + ", you selected " + playerSelection);    
     
      // update below:  
     if (playerSelection == "rock" || playerSelection == "paper"|| playerSelection == "scizzors"){
@@ -38,8 +37,9 @@ function playRound(playerSelection, computerSelection){
         
     else{
     console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"")}
-   
+     
     };
        
+    
 playRound()
 
