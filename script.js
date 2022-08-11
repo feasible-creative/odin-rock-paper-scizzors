@@ -19,27 +19,25 @@ function playRound(playerSelection, computerSelection){
          
                 
         let computerSelection = computerOptions[computerRandom];
-        console.log(computerSelection);       
+        // console.log(computerSelection);       
     }
     
         getComputerChoice();
             
     
-       // update below:  
-    if (playerSelection !== "rock")
-    
-    {console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"     ")
-
-   }else if (playerSelection === computerSelection){
+     // update below:  
+    if (playerSelection == "rock" || playerSelection == "paper"|| playerSelection == "scizzors"){
+        if (playerSelection === computerSelection){
         console.log("DRAW")
-    } else if (playerSelection === "rock" && computerSelection === "paper"){
+        } else if (playerSelection === "rock" && computerSelection === "paper"){console.log("You Lose.");
+        } else if (playerSelection === "paper" && computerSelection === "scizzors"){
         console.log("You Lose.");
-    } else if (playerSelection === "paper" && computerSelection === "scizzors"){
-        console.log("You Lose.");
-    } else{
+        } else{
         console.log("You Win!");
-    }
-
+        }}
+        
+    else{
+    console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"")}
    
     };
        
