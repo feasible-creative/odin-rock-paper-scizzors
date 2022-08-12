@@ -10,6 +10,9 @@
         // let computerSelection = computerOptions[computerRandom];
           
 
+function game(){
+  
+for (i = 0; i < 5; i++){
 
 function playRound(playerSelection, computerSelection){ 
     function getYourChoice(){
@@ -26,24 +29,36 @@ function playRound(playerSelection, computerSelection){
     }
     
         getComputerChoice();
-        console.log("The computer selected " + computerSelection + ", you selected " + playerSelection);    
+
+
+        // console.log("The computer selected " + computerSelection + ", you selected " + playerSelection);    
     
 
     if (playerSelection == "rock" || playerSelection == "paper"|| playerSelection == "scizzors"){
         if (playerSelection === computerSelection){
-        console.log("It's a draw!")
-        } else if (playerSelection === "rock" && computerSelection === "paper"){console.log("You Lose.");
+        console.log("It's a draw! " + "the computer selected " + computerSelection + " as well!")
+        } else if (playerSelection === "rock" && computerSelection === "paper"){console.log("You Lose! " + computerSelection + " beats " + playerSelection);
         } else if (playerSelection === "paper" && computerSelection === "scizzors"){
-        console.log("You Lose.");
+        console.log("You Lose! " + computerSelection + " beats " + playerSelection);
         } else{
-        console.log("You Win!");
+        console.log("You Win! " + playerSelection + " beats " + computerSelection);
         }}
         
     else{
     console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"")}
      
+
     };
+
+    
        
     
 playRound()
+
+
+};
+}
+
+game()
+
 
