@@ -4,12 +4,9 @@
 }
 
 
-
-
 .container{
   display: flex;
   justify-content: center;
-  gap: .5rem
 
 }
 
@@ -20,4 +17,5 @@
 
 .option:hover{
   opacity: 75%;
+  transform: scale(1.1);
 }

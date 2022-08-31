@@ -48,23 +48,48 @@
 
 const options = ['rock', 'paper', 'scizzors'];
 
+function game(){
 
 
-const option = document.querySelector('#option1');
-option.addEventListener('click', () => {
-        // console.log(options);
+
+
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    console.log(options[0]);
 })
 
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+        console.log(options[1]);
+})
+
+const scizzors = document.querySelector('#scizzors');
+scizzors.addEventListener('click', () => {
+        console.log(options[2]);
+})
+    
 
 
+}
+
+
+const option2 = document.querySelector('#option');
+option2.addEventListener('click', getComputerChoice);
 
 function getComputerChoice (){
     return computerSelection = options[Math.floor(Math.random()*options.length)];  
 
+    
+
+
 };
 
 getComputerChoice();
-
 console.log(computerSelection);
 
 
+
+
+
+game();
