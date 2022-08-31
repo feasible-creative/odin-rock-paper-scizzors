@@ -15,4 +15,9 @@
 
 .option{
   width: 8rem;
+  transition: all 300ms;
+}
+
+.option:hover{
+  opacity: 75%;
 }
