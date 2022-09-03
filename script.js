@@ -1,24 +1,20 @@
 //1. Generate random input from Computer
-//2. Receive input from player
+//2. Player clicks on image to select rock, paper, or scizzors
 //3. Determine winner of Game
 //4. Output outcome
 
 
 // function game(){
   
-// // Loop 5 times    
-// for (i = 0; i < 5; i++){
 
-    // function playRound(playerSelection, computerSelection){ 
-    //     function getYourChoice(){
-    //         return playerSelection = prompt("Your choice:").toLowerCase();}
-    //             getYourChoice();
+//     function playRound(playerSelection, computerSelection){ 
+//         function getYourChoice(){
+//             return playerSelection = prompt("Your choice:").toLowerCase();}
+//                 getYourChoice();
 
-// // Randomly select Computer's choice   
-//     function getComputerChoice(computerOptions = ['rock', 'paper', 'scizzors'])
-//         {return computerSelection = computerOptions[Math.floor(Math.random()*computerOptions.length)]
-//         }
-//                 getComputerChoice();
+
+
+
 
 // // Game outcome based on Player vs. Computer selections
 
@@ -46,50 +42,86 @@
 
 // game()
 
+
+
+
+
+
+
+
+
+
+
 const options = ['rock', 'paper', 'scizzors'];
-
-function game(){
-
-
-
-
-
 const rock = document.querySelector('#rock');
-rock.addEventListener('click', () => {
-    console.log(options[0]);
-})
 
-const paper = document.querySelector('#paper');
-paper.addEventListener('click', () => {
-        console.log(options[1]);
-})
 
-const scizzors = document.querySelector('#scizzors');
-scizzors.addEventListener('click', () => {
-        console.log(options[2]);
-})
+
+function game(playerSelection, computerSelection){
+
+
+function getPlayerSelection(){
+    // rock.addEventListener('click', () => {
+    //     return playerSelection = "rock";
+              
+    // })
     
+
 
 
 }
 
+getPlayerSelection();
 
-const option2 = document.querySelector('#option');
-option2.addEventListener('click', getComputerChoice);
+
+
+
+
+// const paper = document.querySelector('#paper');
+// paper.addEventListener('click', () => {
+//         console.log(options[1]);
+// })
+
+// const scizzors = document.querySelector('#scizzors');
+// scizzors.addEventListener('click', () => {
+//         console.log(options[2]);
+// })
+
+// console.log(playerSelection)
+    
+// };
+
+
+
+
+
 
 function getComputerChoice (){
-    return computerSelection = options[Math.floor(Math.random()*options.length)];  
+    return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
 
-    
+getComputerChoice();
+
+
+console.log(playerSelection);
+console.log(computerSelection);
+
+
+// Below to enter computer choice to HTML
+const computer = document.querySelector('#computerOption');
+const text = document.createElement('p');
+text.textContent = computerSelection;
+
+computer.appendChild(text);
+
 
 
 };
-
-getComputerChoice();
-console.log(computerSelection);
-
 
 
 
 
 game();
+
+
+
+
