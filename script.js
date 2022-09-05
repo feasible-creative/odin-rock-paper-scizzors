@@ -49,52 +49,26 @@
 
 
 
+// const options = ['rock', 'paper', 'scizzors'];
 
-
-
-const options = ['rock', 'paper', 'scizzors'];
 const rock = document.querySelector('#rock');
-
+const options = ['rock', 'paper', 'scizzors'];
 
 
 function game(playerSelection, computerSelection){
 
 
-function getPlayerSelection(){
-    // rock.addEventListener('click', () => {
-    //     return playerSelection = "rock";
-              
-    // })
-    
 
+const button = document.querySelectorAll('.option');
 
-
-}
-
-getPlayerSelection();
-
-
-
-
-
-// const paper = document.querySelector('#paper');
-// paper.addEventListener('click', () => {
-//         console.log(options[1]);
-// })
-
-// const scizzors = document.querySelector('#scizzors');
-// scizzors.addEventListener('click', () => {
-//         console.log(options[2]);
-// })
-
-// console.log(playerSelection)
-    
-// };
-
-
-
-
-
+button.forEach(option => {
+   
+    option.addEventListener('click', function getPlayerSelection(){
+        for(i = 0; i <= options.length-1; i++){
+            console.log(options[i])};
+        });
+    });
+  
 
 function getComputerChoice (){
     return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
