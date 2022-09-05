@@ -1,8 +1,14 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
 }
 
+p{
+  color: white;
+}
 
 .container, .container2{
   display: flex;
@@ -13,9 +19,16 @@
 .option{
   width: 8rem;
   transition: all 300ms;
+  margin: 2rem 0rem;
 }
 
 .option:hover{
   opacity: 75%;
   transform: scale(1.1);
+}
+
+.headerImage{
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
 }
