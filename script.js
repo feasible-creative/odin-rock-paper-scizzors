@@ -16,36 +16,6 @@
 
 
 
-// // Game outcome based on Player vs. Computer selections
-
-//     if (playerSelection == "rock" || playerSelection == "paper"|| playerSelection == "scizzors"){
-//         if (playerSelection === computerSelection){
-//         console.log("It's a draw! " + "the computer selected " + computerSelection + " as well!")
-
-//         } else if (playerSelection === "rock" && computerSelection === "paper"){console.log("You Lose! " + computerSelection + " beats " + playerSelection);
-
-//         } else if (playerSelection === "paper" && computerSelection === "scizzors"){
-//         console.log("You Lose! " + computerSelection + " beats " + playerSelection);
-        
-//         } else{
-//         console.log("You Win! " + playerSelection + " beats " + computerSelection);
-//         }}
-        
-//     else{
-//     console.log("Please re-enter your selection using \"rock\", \"paper\", or \"scizzors\"")}
-
-//     }; 
-    
-// playRound()
-
-// }};
-
-// game()
-
-
-
-
-
 
 
 
@@ -63,16 +33,20 @@ const button = document.querySelectorAll('.option');
 
 button.forEach(option => {
    
-    option.addEventListener('click', function getPlayerSelection(){
+    option.addEventListener('click', function getChoices(){
         for(i = 0; i <= options.length-1; i++){
-            console.log("test")  
+            function getPlayerSelection(){
+                return playerSelection = "rock"
+            
         };
 
+        getPlayerSelection();
+        
         function getComputerChoice (){
-            return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
+            return computerSelection = options[Math.floor(Math.random()*options.length)]}}; 
         
         getComputerChoice();
-        console.log(computerSelection);
+
 
         
         
@@ -85,18 +59,39 @@ computer.appendChild(text);
 
 
 
-});
+console.log(playerSelection);
+console.log(computerSelection);
+
+
+
+
+if (playerSelection === computerSelection){
+    outcomeToHTML = `Tie! The computer also selected ${playerSelection}`}
+
+else if (playerSelection === "rock" && computerSelection === "scizzors" || playerSelection === "scizzors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") 
+{
+    outcomeToHTML = `You win! ${playerSelection} beats ${computerSelection}`}
+
+else {outcomeToHTML = `Sorry, ${computerSelection} beats ${playerSelection}`}
+
+// Below to enter match result to HTML
+const outcome = document.querySelector('#outcome');
+const outcomeText = document.createElement('p');
+outcomeText.textContent = outcomeToHTML;
+
+outcome.appendChild(outcomeText);
+
+
 
 });
+
+
+
+});
+
 
 
 };
 
-
-
-
 game();
-
-
-
 
