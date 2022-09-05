@@ -51,11 +51,11 @@ button.forEach(option => {
         
         
 // Below to enter computer choice to HTML
-const computer = document.querySelector('#computerOption');
-const text = document.createElement('p');
-text.textContent = `The computer selected ${computerSelection}`;
+// const computer = document.querySelector('#computerOption');
+// const text = document.createElement('p');
+// text.textContent = `The computer selected: ${computerSelection}`;
 
-computer.appendChild(text);
+// computer.appendChild(text);
 
 
 
