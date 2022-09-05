@@ -13,6 +13,7 @@ p{
 .container, .container2{
   display: flex;
   justify-content: center;
+  padding: 0rem 1rem;
 
 }
 
@@ -28,7 +29,29 @@ p{
 }
 
 .headerImage{
-  width: 30rem;
+  max-width: 100%;
+  width: 20rem;
   height: auto;
   object-fit: cover;
 }
+
+
+
+@media only screen and (min-width: 1000px){
+
+  header{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .headerImage{
+    width: 25rem;
+
+  }
+
+  .option{
+    width: 12rem;
+   
+
+}}

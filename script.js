@@ -66,7 +66,7 @@ console.log(computerSelection);
 
 
 if (playerSelection === computerSelection){
-    outcomeToHTML = `Tie! The computer also selected ${playerSelection}`}
+    outcomeToHTML = `Tie! You both selected ${playerSelection}`}
 
 else if (playerSelection === "rock" && computerSelection === "scizzors" || playerSelection === "scizzors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") 
 {
