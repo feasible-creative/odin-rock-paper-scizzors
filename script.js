@@ -65,21 +65,17 @@ button.forEach(option => {
    
     option.addEventListener('click', function getPlayerSelection(){
         for(i = 0; i <= options.length-1; i++){
-            console.log(options[i])};
-        });
-    });
-  
+            console.log("test")  
+        };
 
-function getComputerChoice (){
-    return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
+        function getComputerChoice (){
+            return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
+        
+        getComputerChoice();
+        console.log(computerSelection);
 
-getComputerChoice();
-
-
-console.log(playerSelection);
-console.log(computerSelection);
-
-
+        
+        
 // Below to enter computer choice to HTML
 const computer = document.querySelector('#computerOption');
 const text = document.createElement('p');
@@ -87,6 +83,11 @@ text.textContent = computerSelection;
 
 computer.appendChild(text);
 
+
+
+});
+
+});
 
 
 };
