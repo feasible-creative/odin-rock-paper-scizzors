@@ -29,7 +29,7 @@ h1{
 section{
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   overflow: hidden;
   
 }
@@ -44,6 +44,7 @@ section .wave{
   background: url(./img/wave.png);
   background-size: 200rem 10rem;
   background-color: var(--clr-primary-900);
+
 }
 
 section .wave.wave1{
