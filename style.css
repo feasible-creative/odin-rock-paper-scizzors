@@ -146,6 +146,7 @@ section .wave.wave4{
 .option:hover{
   opacity: 75%;
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .headerImage{
@@ -154,6 +155,57 @@ section .wave.wave4{
   height: auto;
   object-fit: cover;
 }
+
+
+.footer{
+  background: var(--clr-primary-900);
+  color:var(--clr-primary-100);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  font-size: .75rem;
+  padding-top: 1rem;
+  margin-top: auto;
+
+
+
+  align-items: center;
+ 
+  position: relative;
+  bottom: 0;
+     left: 0;
+     width: 100%;
+     margin-top: auto;
+
+     top: 100%;
+     position: sticky;
+}
+
+
+.footer-logo{
+  width: 10rem;
+  margin: 1rem;
+  
+
+
+}
+
+
+.copyright{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  line-height: 0em;
+  font-size: .75rem;
+  color: var(--clr-primary-100);
+    
+}
+
+
+
+
+
 
 
 
