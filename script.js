@@ -73,12 +73,13 @@ else if (playerSelection === "rock" && computerSelection === "scizzors" || playe
 
 else {outcomeToHTML = `Sorry, ${computerSelection} beats ${playerSelection}`}
 
+
 // Below to enter match result to HTML
 const outcome = document.querySelector('#outcome');
-const outcomeText = document.createElement('p');
-outcomeText.textContent = outcomeToHTML;
+outcome.textContent = "Play Again?";
 
-outcome.appendChild(outcomeText);
+const instructions = document.querySelector('#computerOption');
+instructions.textContent = outcomeToHTML;
 
 
 
@@ -92,5 +93,8 @@ outcome.appendChild(outcomeText);
 
 };
 
+
+
 game();
+
 
