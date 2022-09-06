@@ -4,22 +4,15 @@
 //4. Output outcome
 
 
-// function game(){
-  
+// Below to enter computer choice to HTML
+// const computer = document.querySelector('#computerOption');
+// const text = document.createElement('p');
+// text.textContent = `The computer selected: ${computerSelection}`;
 
-//     function playRound(playerSelection, computerSelection){ 
-//         function getYourChoice(){
-//             return playerSelection = prompt("Your choice:").toLowerCase();}
-//                 getYourChoice();
-
+// computer.appendChild(text);
 
 
 
-
-
-
-
-// const options = ['rock', 'paper', 'scizzors'];
 
 const rock = document.querySelector('#rock');
 const options = ['rock', 'paper', 'scizzors'];
@@ -32,38 +25,44 @@ function game(playerSelection, computerSelection){
 const button = document.querySelectorAll('.option');
 
 button.forEach(option => {
+    
    
     option.addEventListener('click', function getChoices(){
-        for(i = 0; i <= options.length-1; i++){
+        // console.log(this.id, this.innerHTML)
+
+
             function getPlayerSelection(){
-                return playerSelection = "rock"
+                if(option.id === "rock"){
+                    return playerSelection = "rock"
+                }
+
+                else if (option.id === "paper"){
+                    return playerSelection = "paper"
+                }
+
+                else if (option.id === "scizzors"){
+                    return playerSelection = "scizzors"
+                }
+                                     
             
         };
 
-        getPlayerSelection();
+
+getPlayerSelection();
         
-        function getComputerChoice (){
-            return computerSelection = options[Math.floor(Math.random()*options.length)]}}; 
+    function getComputerChoice (){
+            return computerSelection = options[Math.floor(Math.random()*options.length)]}; 
         
         getComputerChoice();
 
 
         
-        
-// Below to enter computer choice to HTML
-// const computer = document.querySelector('#computerOption');
-// const text = document.createElement('p');
-// text.textContent = `The computer selected: ${computerSelection}`;
-
-// computer.appendChild(text);
-
-
 
 console.log(playerSelection);
 console.log(computerSelection);
 
 
-
+// Result of game() based on PlayerSelection vs. Randomly generated ComputerSelection
 
 if (playerSelection === computerSelection){
     outcomeToHTML = `Tie! You both selected ${playerSelection}`}
