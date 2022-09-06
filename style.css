@@ -15,6 +15,7 @@
   font-family: sans-serif, Arial, Helvetica, sans-serif;
   background-color: var(--clr-primary-900);
   color: var(--clr-primary-100);
+  touch-action: manipulation;
 }
 
 p{
