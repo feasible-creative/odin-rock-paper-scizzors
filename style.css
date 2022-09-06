@@ -1,17 +1,29 @@
+:root{
+  --clr-primary-100: #ffffff;
+  --clr-primary-200: #472fef;
+  --clr-primary-300: #11eb4c;
+  --clr-primary-400: #8c2fdc;
+  --clr-primary-900: #000000;
+
+}
+
+
+
 *{
   padding: 0;
   margin: 0;
   font-family: sans-serif, Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: white;
+  background-color: var(--clr-primary-900);
+  color: var(--clr-primary-100);
 }
 
 p{
-  color: white;
+  color: var(--clr-primary-100);
 }
 
 h1{
   font-size: 2rem;
+  text-align: center;
 }
 
 section{
@@ -19,6 +31,7 @@ section{
   width: 100%;
   height: 50vh;
   overflow: hidden;
+  
 }
 
 section .wave{
@@ -30,6 +43,7 @@ section .wave{
   height: 10rem;
   background: url(./img/wave.png);
   background-size: 200rem 10rem;
+  background-color: var(--clr-primary-900);
 }
 
 section .wave.wave1{
@@ -38,6 +52,8 @@ section .wave.wave1{
   opacity: 1;
   animation-delay: 0s;
   bottom: 0;
+  background-color: var(--clr-primary-200);
+ 
 }
 
 section .wave.wave2{
@@ -46,14 +62,16 @@ section .wave.wave2{
   opacity: 0.5;
   animation-delay: -5s;
   bottom: 2rem;
+  background-color: var(--clr-primary-300);
 }
 
 section .wave.wave3{
   animation: animate 30s linear infinite;
   z-index: 998;
-  opacity: 0.2;
+  opacity: 0.25;
   animation-delay: -2s;
   bottom: 15;
+  background-color: var(--clr-primary-200);
 }
 
 section .wave.wave4{
@@ -62,6 +80,7 @@ section .wave.wave4{
   opacity: 0.7;
   animation-delay: -5s;
   bottom: 5rem;
+  background-color: var(--clr-primary-400);
 }
 
 
@@ -78,7 +97,7 @@ section .wave.wave4{
 }
 
 100%
-{background-position-x: 25rem;}
+{background-position-x: 250rem;}
 
 }
 
@@ -91,7 +110,7 @@ section .wave.wave4{
 }
 
 100%
-{background-position-x: -25rem;}
+{background-position-x: -500rem;}
 
 }
 
@@ -108,13 +127,15 @@ section .wave.wave4{
   gap: .5rem;
   max-width: 100%;
   padding: 0rem 1rem;
+  margin: 2rem 0rem;
+  
 
 }
 
 .option{
   width: 8rem;
   transition: all 300ms;
-  margin: 1rem 0rem;
+  
 }
 
 .option:hover{
