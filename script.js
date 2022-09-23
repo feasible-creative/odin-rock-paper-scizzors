@@ -12,29 +12,26 @@
 
 const options = ["rock", "paper", "scizzors"];
 
-
-const playerScore = document.createElement('p')
+// Set starting score for player to 0
+const playerScore = document.createElement("p");
 playerScore.textContent = 0;
+const PlayerScoreContainer = document
+  .getElementById("playerScore")
+  .appendChild(playerScore);
 
-const PlayerScoreContainer = document.getElementById('playerScore').appendChild(playerScore);
-
-
-const computerScore = document.createElement('p')
+// Set starting score for computer to 0
+const computerScore = document.createElement("p");
 computerScore.textContent = 0;
-const computerScoreContainer = document.getElementById('computerScore').appendChild(computerScore);
+const computerScoreContainer = document
+  .getElementById("computerScore")
+  .appendChild(computerScore);
 
-
-
-
-
-
+// playRound function parameters determine selection based on user's input and also a randomized for the computer
 function playRound(playerSelection, computerSelection) {
   const button = document.querySelectorAll(".option");
 
   button.forEach((option) => {
     option.addEventListener("click", function getChoices() {
-      // console.log(this.id, this.innerHTML)
-
       function getPlayerSelection() {
         if (option.id === "rock") {
           return (playerSelection = "rock");
@@ -47,6 +44,7 @@ function playRound(playerSelection, computerSelection) {
 
       getPlayerSelection();
 
+      //getComputerChoice returns computerSelection (random selection)
       function getComputerChoice() {
         return (computerSelection =
           options[Math.floor(Math.random() * options.length)]);
@@ -54,12 +52,7 @@ function playRound(playerSelection, computerSelection) {
 
       getComputerChoice();
 
-    //   console.log(playerSelection);
-    //   console.log(computerSelection);
-
-      // Result of game() based on PlayerSelection vs. Randomly generated ComputerSelection
-    
-
+      //Result of game based on winner
       if (playerSelection === computerSelection) {
         outcomeToHTML = `Tie! You both selected ${playerSelection}`;
       } else if (
@@ -68,44 +61,35 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "paper" && computerSelection === "rock")
       ) {
         outcomeToHTML = `You win! ${playerSelection} beats ${computerSelection}`;
-        playerScore.textContent ++;
-
+        playerScore.textContent++;
       } else {
         outcomeToHTML = `Sorry, ${computerSelection} beats ${playerSelection}`;
-        computerScore.textContent ++;
+        computerScore.textContent++;
       }
-      
-    
-      if (parseInt(computerScore.textContent) === 5 || parseInt(playerScore.textContent) === 5)
-      { if (parseInt(playerScore.textContent) === 5){
-        outcomeToHTML = 'Player Wins!'
+
+      //Once either the player or computer reaches a score of 5, determine the winner
+      if (
+        parseInt(computerScore.textContent) === 5 ||
+        parseInt(playerScore.textContent) === 5
+      ) {
+        if (parseInt(playerScore.textContent) === 5) {
+          outcomeToHTML = "Player Wins!";
+          button.forEach((e) => {
+            option.remove();
+          });
+        } else {
+          outcomeToHTML = "Computer Wins.";
+        }
       }
-      else{outcomeToHTML = 'Computer Wins.'}
-    //     console.log(parseInt(computerScore.textContent))
-    //    console.log(parseInt(playerScore.textContent))
 
-        
-      };
-
-     
-
-      // Below to enter match result to HTML
-
-
-
+      //Enter each individual match result to HTML
       const outcome = document.querySelector("#outcome");
       outcome.textContent = "Play Again?";
 
       const instructions = document.querySelector("#computerOption");
       instructions.textContent = outcomeToHTML;
-
-    
-
-
     });
   });
 }
 
 playRound();
-
-

@@ -1,46 +1,44 @@
-:root{
+:root {
   --clr-primary-100: #ffffff;
   --clr-primary-200: #472fef;
   --clr-primary-300: #11eb4c;
   --clr-primary-400: #8c2fdc;
   --clr-primary-900: #000000;
-
 }
 
-
-
-*{
+* {
   padding: 0;
   margin: 0;
   font-family: sans-serif, Arial, Helvetica, sans-serif;
-  background-color: var(--clr-primary-900);
   color: var(--clr-primary-100);
   touch-action: manipulation;
 }
 
-p{
+body {
+  background-color: var(--clr-primary-900);
+}
+
+p {
   color: var(--clr-primary-100);
 }
 
-h1{
+h1 {
   font-size: 1.5rem;
   text-align: center;
 }
 
-h2{
+h2 {
   font-size: 1.25rem;
 }
 
-section{
+section {
   position: relative;
   width: 100%;
   height: 35vh;
   overflow: hidden;
-  
 }
 
-section .wave{
-
+section .wave {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -49,20 +47,18 @@ section .wave{
   background: url(./img/wave.png);
   background-size: 200rem 10rem;
   background-color: var(--clr-primary-900);
-
 }
 
-section .wave.wave1{
+section .wave.wave1 {
   animation: animate 30s linear infinite;
   z-index: 1000;
   opacity: 1;
   animation-delay: 0s;
   bottom: 0;
   background-color: var(--clr-primary-200);
- 
 }
 
-section .wave.wave2{
+section .wave.wave2 {
   animation: animate2 20s linear infinite;
   z-index: 999;
   opacity: 0.5;
@@ -71,7 +67,7 @@ section .wave.wave2{
   background-color: var(--clr-primary-300);
 }
 
-section .wave.wave3{
+section .wave.wave3 {
   animation: animate 30s linear infinite;
   z-index: 998;
   opacity: 0.25;
@@ -80,7 +76,7 @@ section .wave.wave3{
   background-color: var(--clr-primary-200);
 }
 
-section .wave.wave4{
+section .wave.wave4 {
   animation: animate2 20s linear infinite;
   z-index: 997;
   opacity: 0.7;
@@ -89,159 +85,112 @@ section .wave.wave4{
   background-color: var(--clr-primary-400);
 }
 
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
 
-
-
-
-
-
-@keyframes animate
-{
-  0%
-  {background-position-x: 0;
-
+  100% {
+    background-position-x: 250rem;
+  }
 }
 
-100%
-{background-position-x: 250rem;}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
 
+  100% {
+    background-position-x: -500rem;
+  }
 }
 
-
-@keyframes animate2
-{
-  0%
-  {background-position-x: 0;
-
-}
-
-100%
-{background-position-x: -500rem;}
-
-}
-
-
-
-
-
-
-
-
-.container, .container2{
+.container,
+.container2 {
   display: flex;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   max-width: 100%;
   padding: 0rem 1rem;
   margin: 2rem 0rem;
-  
-
 }
 
-.container2{
+.container2 {
   flex-direction: column;
   text-align: center;
-
 }
 
-.option{
+.option {
   width: 8rem;
   transition: all 300ms;
-  
 }
 
-.option:hover{
+.option:hover {
   opacity: 75%;
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.headerImage{
+.headerImage {
   max-width: 100%;
   width: 15rem;
   height: auto;
   object-fit: cover;
 }
 
-
-.footer{
+.footer {
   background: var(--clr-primary-900);
-  color:var(--clr-primary-100);
+  color: var(--clr-primary-100);
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-around;
-  font-size: .75rem;
+  font-size: 0.75rem;
   padding-top: 1rem;
   margin-top: auto;
 
-
-
   align-items: center;
- 
+
   position: relative;
   bottom: 0;
-     left: 0;
-     width: 100%;
-     margin-top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: auto;
 
-     top: 100%;
-     position: sticky;
+  top: 100%;
+  position: sticky;
 }
 
-
-.footer-logo{
+.footer-logo {
   width: 10rem;
   margin: 1rem;
-  
-
-
 }
 
-
-.copyright{
+.copyright {
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
   line-height: 0em;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: var(--clr-primary-100);
-    
 }
 
-
-
-
-
-
-
-
-@media only screen and (min-width: 1000px){
-
-  header{
+@media only screen and (min-width: 1000px) {
+  header {
     display: flex;
     justify-content: center;
   }
 
-
-  .headerImage{
+  .headerImage {
     width: 25rem;
-
   }
 
-  .option{
+  .option {
     width: 10rem;
-   
+  }
 
-}
-
-.container, .container2{
-  gap: 4rem;
-
-}
-
-
-
-
-
+  .container,
+  .container2 {
+    gap: 4rem;
+  }
 }
