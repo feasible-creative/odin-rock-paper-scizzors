@@ -1,97 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scizzors! | A JavaScript Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <link rel="icon" sizes="192x192" href="./img/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img class="headerImage" src="./img/RPS_Header.png"
+      /></a>
+    </header>
 
-    <link rel="shortcut icon" href="./img/favicon.png">
-    <link rel="apple-touch-icon" href="./img/favicon.png">
-    <link rel="icon" sizes="192x192" href="./img/favicon.png">
+    <div class="container">
+      <h1 id="computerOption">&nbsp;</h1>
+    </div>
 
+    <div class="container">
+      <img id="rock" class="option" src="img/rock.png" />
+      <img id="paper" class="option" src="img/paper.png" />
+      <img id="scizzors" class="option" src="img/scizzors.png" />
+    </div>
 
-
-</head>
-<body>
-
-<header>
-   <a href="index.html"><img class="headerImage" src="./img/RPS_Header.png"></a>
-
-</header>
-
-
-
-<div class="container">
-    <h1 id = "computerOption">&nbsp;</h1>
-    
-</div>
-
-
-
-
-
-<div class="container">
-    <img id = "rock" class="option" src="img/rock.png">
-    <img id = "paper" class="option"  src="img/paper.png">
-    <img id = "scizzors" class="option" src="img/scizzors.png">
-</div>
-
-
-    
-<div class="container2">
-    <h2 id = "outcome">Select an option above to play!</h2>
-    
-</div>
+    <div class="container2">
+      <h2 id="outcome">Select an option above to play!</h2>
+      <br>
+      <h3 id="playerScore">Player Score: </h3>
+      <h3 id="computerScore">Computer Score: </h3>
 
 
 
-<section>
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
+    </div>
 
-</section>
+    <section>
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </section>
 
+    <footer>
+      <div class="footer">
+        <a href="https://feasiblecreative.com/"
+          ><img
+            class="footer-logo"
+            src="img/feasible_creative_logo.png"
+            id="feasible creative logo"
+        /></a>
 
-
-
-<footer>
-
-    <div class="footer">
-   
-  
-        <a href="https://feasiblecreative.com/"><img class="footer-logo" src="img/feasible_creative_logo.png" id="feasible creative logo"></a>
-  
-     
-  
-          <p class="copyright">© 2022 feasible creative</p>
-  
-  
-     </div>
-  
+        <p class="copyright">© 2022 feasible creative</p>
+      </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src = script.js></script>
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
